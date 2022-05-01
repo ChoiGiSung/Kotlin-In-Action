@@ -1,3 +1,4 @@
+@file:JvmName("패키지 이름 변경")
 package com.kt.action.chapter3
 
 fun <T> joinToString(
