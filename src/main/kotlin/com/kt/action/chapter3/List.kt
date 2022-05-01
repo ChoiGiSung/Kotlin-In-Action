@@ -10,9 +10,9 @@ class List {
 
     fun <T> joinToString(
         collection: Collection<T>,
-        separator: String,
-        prefix: String,
-        postfix: String
+        separator: String = ",",
+        prefix: String = "",
+        postfix: String = ""
     ): String {
         val builder = StringBuilder(prefix)
 
@@ -30,4 +30,5 @@ fun main(args: Array<String>) {
     val customList: List = List()
 
     customList.joinToString(listOf<String>(), separator = "", "m", postfix = "")
+    customList.joinToString(listOf<String>())
 }
