@@ -23,6 +23,12 @@ fun <T> Collection<T>.joinToString(
 
 fun String.lastChar(): Char = this.get(this.length - 1)
 
+var StringBuilder.lastChars: Char
+    get() = get(length - 1)
+    set(vale: Char) {
+        setCharAt(length - 1, vale)
+    }
+
 fun main(args: Array<String>) {
     println("asd".lastChar())
 }
