@@ -33,4 +33,9 @@ fun main(args: Array<String>) {
     println("asd".lastChar())
     //listof는 vararg 매개변수이다
     val list = listOf("asd", *args)
+
+    // to는 중위 호출
+    val pair = 1.to("asd")
+    val pairTo = 1 to "asd"
+    //위와 같은 호출을 구조 분해 선언
 }
