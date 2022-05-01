@@ -4,15 +4,14 @@ package com.kt.action.chapter3
 
 const val SAMPLE = "asd"
 
-fun <T> joinToString(
-    collection: Collection<T>,
+fun <T> Collection<T>.joinToString(
     separator: String = ",",
     prefix: String = "",
     postfix: String = ""
 ): String {
     val builder = StringBuilder(prefix)
 
-    for ((index, element) in collection.withIndex()) {
+    for ((index, element) in this.withIndex()) {
         if (index > 0) builder.append(separator)
         builder.append(element)
     }
@@ -24,6 +23,6 @@ fun <T> joinToString(
 
 fun String.lastChar(): Char = this.get(this.length - 1)
 
-fun main(args:Array<String>){
+fun main(args: Array<String>) {
     println("asd".lastChar())
 }
