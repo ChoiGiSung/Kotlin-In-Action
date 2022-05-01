@@ -1,5 +1,7 @@
 package com.kt.action.chapter5
 
+import com.kt.action.chapter3.joinToString
+
 data class Person(val name: String, val age: Int)
 
 fun main(args: Array<String>) {
@@ -11,4 +13,15 @@ fun main(args: Array<String>) {
 
     println(sum(1, 2))
     run { println(sum(1, 2)) }
+}
+
+fun lambdaJoinToString() {
+    val people = listOf(Person("철수", 1), Person("영희", 2))
+
+    people.joinToString(
+        " ",
+        transform = { person: Person -> person.name }
+    )
+
+    people.joinToString("") { person: Person -> person.name }
 }
