@@ -39,3 +39,11 @@ fun printProblemCounts(responses: Collection<String>) {
         }
     }
 }
+
+fun flatMap() {
+    class Book(val title: String, val authors: List<String>)
+
+    val books = listOf(Book("책1", listOf("저자1","저자2")))
+
+    books.flatMap { it.authors }.toSet()
+}
