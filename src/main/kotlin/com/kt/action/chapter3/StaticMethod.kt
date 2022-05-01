@@ -1,4 +1,5 @@
 @file:JvmName("패키지 이름 변경")
+
 package com.kt.action.chapter3
 
 const val SAMPLE = "asd"
@@ -19,4 +20,10 @@ fun <T> joinToString(
     builder.append(postfix)
     builder.append(SAMPLE)
     return builder.toString()
+}
+
+fun String.lastChar(): Char = this.get(this.length - 1)
+
+fun main(args:Array<String>){
+    println("asd".lastChar())
 }
