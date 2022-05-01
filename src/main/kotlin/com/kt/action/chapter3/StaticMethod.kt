@@ -31,4 +31,6 @@ var StringBuilder.lastChars: Char
 
 fun main(args: Array<String>) {
     println("asd".lastChar())
+    //listof는 vararg 매개변수이다
+    val list = listOf("asd", *args)
 }
