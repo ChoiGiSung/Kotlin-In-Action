@@ -46,4 +46,5 @@ fun flatMap() {
     val books = listOf(Book("책1", listOf("저자1","저자2")))
 
     books.flatMap { it.authors }.toSet()
+
 }
