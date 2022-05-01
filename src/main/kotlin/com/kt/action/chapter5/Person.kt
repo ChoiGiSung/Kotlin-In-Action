@@ -24,4 +24,5 @@ fun lambdaJoinToString() {
     )
 
     people.joinToString("") { person: Person -> person.name }
+    people.joinToString("") { it.name }
 }
