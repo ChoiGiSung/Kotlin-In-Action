@@ -6,4 +6,9 @@ fun main(args: Array<String>) {
     val people = listOf(Person("철수", 1), Person("영희", 2))
 
     println(people.maxByOrNull { it.age })
+
+    val sum = { x: Int, y: Int -> x + y }
+
+    println(sum(1, 2))
+    run { println(sum(1, 2)) }
 }
