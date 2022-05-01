@@ -1,6 +1,8 @@
 @file:JvmName("패키지 이름 변경")
 package com.kt.action.chapter3
 
+const val SAMPLE = "asd"
+
 fun <T> joinToString(
     collection: Collection<T>,
     separator: String = ",",
@@ -15,5 +17,6 @@ fun <T> joinToString(
     }
 
     builder.append(postfix)
+    builder.append(SAMPLE)
     return builder.toString()
 }
