@@ -48,3 +48,11 @@ fun flatMap() {
     books.flatMap { it.authors }.toSet()
 
 }
+
+fun layLoading(){
+    val people = listOf(Person("철수", 1), Person("영희", 2))
+    people.asSequence()
+        .map(Person::name)
+        .filter { it.startsWith("철") }
+        .toList()
+}
