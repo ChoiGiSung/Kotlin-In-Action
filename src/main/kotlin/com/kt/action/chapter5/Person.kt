@@ -1,6 +1,7 @@
 package com.kt.action.chapter5
 
 import com.kt.action.chapter3.joinToString
+import java.io.File
 
 data class Person(val name: String, val age: Int)
 
@@ -69,4 +70,8 @@ fun layLoading() {
         .find { it > 3 }
 
     print("find = $find1")
+
 }
+
+fun File.isInsideHidden() =
+    generateSequence(this) { it.parentFile }.any { it.isHidden }
