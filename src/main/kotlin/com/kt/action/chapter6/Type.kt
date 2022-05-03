@@ -32,7 +32,17 @@ fun nothing(): Nothing {
     }
 }
 
-fun list(){
-    mapOf<String,Int>()
-    mutableMapOf<String,Int>()
+fun list() {
+    mapOf<String, Int>()
+    mutableMapOf<String, Int>()
+}
+
+fun array() {
+    val array = Array<String>(26) { i -> ('a' + i).toString() }
+    println("%s/%s/%s".format(*listOf("a").toTypedArray()))
+
+    val intArray = IntArray(6)
+    intArray.forEachIndexed() { index: Int, i: Int ->
+        println(index)
+    }
 }
