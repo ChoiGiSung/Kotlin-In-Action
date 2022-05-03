@@ -16,5 +16,6 @@ fun String.filter(predicate: (Char) -> Boolean): String {
 data class Order(val item: Int)
 
 fun getCostCalculator(): (Order) -> Double {
+
     return { order -> 1.2 * order.item }
 }
