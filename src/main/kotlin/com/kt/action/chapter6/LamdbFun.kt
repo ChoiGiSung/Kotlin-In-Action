@@ -1,7 +1,7 @@
 package com.kt.action.chapter6
 
 fun main() {
-    val listOf = listOf("민수")
+    val listOf = listOf<String?>("민수")
     listOf[0]?.let { sendEmail(it) }
 }
 
