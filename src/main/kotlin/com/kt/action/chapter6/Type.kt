@@ -31,3 +31,8 @@ fun nothing(): Nothing {
         println("gg")
     }
 }
+
+fun list(){
+    mapOf<String,Int>()
+    mutableMapOf<String,Int>()
+}
