@@ -1,11 +1,19 @@
 package com.kt.action.chapter7
 
+import java.math.BigInteger
+
 data class Point(val x: Int, val y: Int) {
     operator fun plus(other: Point): Point {
         return Point(x + other.x, y + other.y)
     }
 
+    operator fun unaryMinus(): Point {
+        return Point(-x, -y)
+    }
+
 }
+
+fun BigInteger.inc() = this + BigInteger.ONE
 
 fun main() {
     var point = Point(1, 2)
