@@ -1,6 +1,6 @@
 package com.kt.action.chapter6
 
-fun main(){
+fun main() {
     autoBoxing()
 }
 
@@ -20,4 +20,14 @@ fun autoBoxing() {
 
     val l = 1L + 1
     println(l.javaClass)
+}
+
+fun unit(): Unit {
+
+}
+
+fun nothing(): Nothing {
+    while (true) {
+        println("gg")
+    }
 }
