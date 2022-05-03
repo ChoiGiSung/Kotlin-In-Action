@@ -13,3 +13,12 @@ fun isNullOrEmpty(input: String?) {
     println(input?.toString())
     println(input.isNullOrEmpty())
 }
+
+fun <T> printHashCode(t: T) {
+    println(t?.hashCode())
+}
+
+
+fun <T : Any> printHashCodeAny(t: T) {
+    println(t.hashCode())
+}
