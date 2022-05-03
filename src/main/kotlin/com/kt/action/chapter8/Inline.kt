@@ -21,3 +21,11 @@ fun localReturn() {
         }
     }
 }
+
+fun anonymousReturn() {
+    val list = listOf(1, 2, 3)
+
+    list.forEach(fun(input) {
+        if (input == 1) return
+    })
+}
