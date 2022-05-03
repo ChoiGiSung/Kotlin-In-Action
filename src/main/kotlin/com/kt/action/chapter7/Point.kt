@@ -1,5 +1,6 @@
 package com.kt.action.chapter7
 
+import java.lang.IndexOutOfBoundsException
 import java.math.BigInteger
 
 data class Point(val x: Int, val y: Int) : Comparable<Point> {
@@ -15,6 +16,18 @@ data class Point(val x: Int, val y: Int) : Comparable<Point> {
         return compareValuesBy(this, other, Point::x, Point::y)
     }
 
+    operator fun contains(p: Point): Boolean {
+        return p.x in x until y
+    }
+
+    operator fun get(input: Int): Int {
+        return when (input) {
+            0 -> x
+            1 -> y
+            else -> throw IndexOutOfBoundsException("초과")
+        }
+    }
+
 }
 
 fun BigInteger.inc() = this + BigInteger.ONE
@@ -28,4 +41,8 @@ fun main() {
 
 
     println(point > point2)
+    println(point in point2)
+    println(point[1])
+
+    val (x,y) = point
 }
