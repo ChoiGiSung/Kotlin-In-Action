@@ -2,13 +2,17 @@ package com.kt.action.chapter7
 
 import java.math.BigInteger
 
-data class Point(val x: Int, val y: Int) {
+data class Point(val x: Int, val y: Int) : Comparable<Point> {
     operator fun plus(other: Point): Point {
         return Point(x + other.x, y + other.y)
     }
 
     operator fun unaryMinus(): Point {
         return Point(-x, -y)
+    }
+
+    override fun compareTo(other: Point): Int {
+        return compareValuesBy(this, other, Point::x, Point::y)
     }
 
 }
@@ -21,4 +25,7 @@ fun main() {
 
     point += point2 // 새로운 객체 생성. 변경하고 싶다면 plus말고 plusAssign 오버라이딩
     println(point + point2) //Point(x=2, y=4)
+
+
+    println(point > point2)
 }
