@@ -26,6 +26,7 @@ class Herd<out T : Animal> {
 //        컴파일 에러
 //    }
 
+
 }
 
 class Cat : Animal(){
