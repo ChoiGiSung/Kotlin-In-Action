@@ -4,6 +4,7 @@ import java.lang.IllegalArgumentException
 import kotlin.reflect.KClass
 
 object Validators {
+
     private val validators =
         mutableMapOf<KClass<*>, FieldValidator<*>>()
 
