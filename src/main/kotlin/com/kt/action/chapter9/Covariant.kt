@@ -31,4 +31,5 @@ class Herd<out T : Animal> {
 
 class Cat : Animal(){
 
+
 }
