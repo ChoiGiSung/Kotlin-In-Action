@@ -1,6 +1,8 @@
 package com.kt.action.chapter9
 
-fun main(){
+import java.lang.IllegalArgumentException
+
+fun main() {
     typeErasure()
 }
 
@@ -11,15 +13,20 @@ fun <T> ensureTrailingPeriod(seq: T)
     }
 }
 
-fun typeErasure(){
+fun typeErasure() {
     val listOf = listOf(1, 2)
     val mapOf = mapOf("1" to "one")
 
-    if (listOf is List){ //List<Int> -> x
+    if (listOf is List) { //List<Int> -> x
         println("리스트?")
     }
 
-    if (mapOf is List<*>){
+    if (mapOf is List<*>) {
         println("리스트?")
     }
+}
+
+fun castException(c: Collection<*>) {
+    val list = c as? List<Int> ?: throw IllegalArgumentException("gg")
+    list.sum()
 }
