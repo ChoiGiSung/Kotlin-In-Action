@@ -4,6 +4,9 @@ import java.util.*
 
 fun main() {
     isA<String>(listOf("A"))
+    val mutableListOf = mutableListOf(2)
+//    addAnswer(mutableListOf) //error
+//    readAnswer(mutableListOf) // ok
 }
 
 inline fun <reified T> isA(value: Any) = value is T
@@ -19,3 +22,13 @@ fun serviceLoader() {
 }
 
 inline fun <reified T> loadService() = ServiceLoader.load(T::class.java)
+
+fun addAnswer(list: MutableList<Any>) {
+    list.add(42)
+}
+
+fun readAnswer(list: List<Any>) {
+    for (any in list) {
+
+    }
+}
